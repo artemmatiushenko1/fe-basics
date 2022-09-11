@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Матюшенко А.В. | ІП-04 | Лаб. №1 | 55</title>
+    <style>
+      /* ----------------- Task 1 ------------------- */
+      * {
+        box-sizing: border-box;
+      }
+
+      table {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      tr:first-child {
+        background-color: #558f8f;
+        height: 60px;
+      }
+
+      tr:nth-child(2) {
+        background-color: #f5f555;
+        height: 30px;
+      }
+
+      tr:nth-child(3) {
+        height: 30px;
+      }
+
+      tr:first-child:hover,
+      tr:nth-child(2):hover {
+        filter: invert(100%);
+      }
+
+      tr:first-child,
+      tr:nth-child(2) {
+        transition: filter 0.2s ease;
+      }
+
+      td {
+        text-align: center;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      /* ----------------- Task 1 ------------------- */
+
+      /* ----------------- Task 2 ------------------- */
+
+      .composition-position,
+      .composition-transform {
+        --composition-size: 400px;
+
+        position: relative;
+        height: var(--composition-size);
+        width: var(--composition-size);
+        background-color: rgba(245, 245, 220, 0.723);
+      }
+
+      .composition__circle {
+        --circle-size: 100px;
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        border-radius: 50%;
+        border: 2px solid #000;
+      }
+
+      .composition__circle--green {
+        background-color: rgba(0, 128, 0, 0.5);
+      }
+
+      .composition__circle--blue {
+        background-color: rgb(0, 0, 255, 0.5);
+      }
+
+      .composition__circle--red {
+        background-color: rgb(255, 0, 0, 0.5);
+      }
+
+      .composition-position__circle--top {
+        position: absolute;
+        left: calc(50% - var(--circle-size) / 2);
+        top: calc(39% - var(--circle-size) / 2);
+      }
+
+      .composition-position__circle--bottom-left {
+        position: absolute;
+        left: calc(40% - var(--circle-size) / 2);
+        bottom: calc(45% - var(--circle-size) / 2);
+      }
+
+      .composition-position__circle--bottom-right {
+        position: absolute;
+        right: calc(40% - var(--circle-size) / 2);
+        bottom: calc(45% - var(--circle-size) / 2);
+      }
+
+      .composition-transform__circle--top {
+        transform: translate(
+          calc(var(--composition-size) / 2 - 50%),
+          calc(var(--composition-size) / 2 - 50% - 45%)
+        );
+      }
+
+      .composition-transform__circle--bottom-left {
+        transform: translate(
+          calc(var(--composition-size) / 2 - 50% - 40%),
+          calc(var(--composition-size) / 2 - 50% - var(--circle-size) + 20%)
+        );
+      }
+
+      .composition-transform__circle--bottom-right {
+        transform: translate(
+          calc(var(--composition-size) / 2 - 50% + 40%),
+          calc(var(--composition-size) / 2 - 50% - 2 * var(--circle-size) + 20%)
+        );
+      }
+      /* ----------------- Task 2 ------------------- */
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Завдання №1</p>
+      <table>
+        <tr>
+          <th colspan="2">Матюшенко</th>
+          <th colspan="2">Артем</th>
+          <th colspan="4">Вячеславович</th>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="2">ІП-04</td>
+          <td rowspan="2">Лаб №2</td>
+          <td>Варіант 55</td>
+          <td rowspan="2" colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+          <td colspan="2">&nbsp;</td>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <p>Завдання №2</p>
+      <div style="display: inline-block">
+        <p>Position:</p>
+        <div class="composition-position">
+          <div
+            class="composition__circle composition-position__circle--top composition__circle--red"
+          ></div>
+          <div
+            class="composition__circle composition-position__circle--bottom-left composition__circle--blue"
+          ></div>
+          <div
+            class="composition__circle composition-position__circle--bottom-right composition__circle--green"
+          ></div>
+        </div>
+      </div>
+      <div style="display: inline-block">
+        <p>Transform:</p>
+        <div class="composition-transform">
+          <div
+            class="composition-transform__circle composition__circle composition-transform__circle--top composition__circle--red"
+          ></div>
+          <div
+            class="composition-transform__circle composition__circle composition-transform__circle--bottom-left composition__circle--blue"
+          ></div>
+          <div
+            class="composition-transform__circle composition__circle composition-transform__circle--bottom-right composition__circle--green"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
