@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk-UA">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Матюшенко А.В. | ІП-04 | Лаб. №1 | 55</title>
+    <title>Матюшенко А.В. | ІП-04 | Лаб. №2 | 55</title>
+    <link rel="stylesheet" href="./style.css" />
     <style>
       /* ----------------- Task 1 ------------------- */
       * {
@@ -18,7 +19,12 @@
 
       tr:first-child {
         background-color: #558f8f;
+        color: #fff;
         height: 60px;
+      }
+
+      tr:first-child:hover {
+        background-color: #aa7070;
       }
 
       tr:nth-child(2) {
@@ -26,18 +32,18 @@
         height: 30px;
       }
 
+      tr:nth-child(2):hover {
+        background-color: #0a0aaa;
+        color: #fff;
+      }
+
       tr:nth-child(3) {
         height: 30px;
       }
 
-      tr:first-child:hover,
-      tr:nth-child(2):hover {
-        filter: invert(100%);
-      }
-
       tr:first-child,
       tr:nth-child(2) {
-        transition: filter 0.2s ease;
+        transition: background-color 0.2s ease;
       }
 
       td {
@@ -45,85 +51,12 @@
       }
 
       table,
-      th,
       td {
-        border: 1px solid black;
+        border: 4px outset;
+        border-collapse: collapse;
       }
 
       /* ----------------- Task 1 ------------------- */
-
-      /* ----------------- Task 2 ------------------- */
-
-      .composition-position,
-      .composition-transform {
-        --composition-size: 400px;
-
-        position: relative;
-        height: var(--composition-size);
-        width: var(--composition-size);
-        background-color: rgba(245, 245, 220, 0.723);
-      }
-
-      .composition__circle {
-        --circle-size: 100px;
-
-        width: var(--circle-size);
-        height: var(--circle-size);
-        border-radius: 50%;
-        border: 2px solid #000;
-      }
-
-      .composition__circle--green {
-        background-color: rgba(0, 128, 0, 0.5);
-      }
-
-      .composition__circle--blue {
-        background-color: rgb(0, 0, 255, 0.5);
-      }
-
-      .composition__circle--red {
-        background-color: rgb(255, 0, 0, 0.5);
-      }
-
-      .composition-position__circle--top {
-        position: absolute;
-        left: calc(50% - var(--circle-size) / 2);
-        top: calc(39% - var(--circle-size) / 2);
-      }
-
-      .composition-position__circle--bottom-left {
-        position: absolute;
-        left: calc(40% - var(--circle-size) / 2);
-        bottom: calc(45% - var(--circle-size) / 2);
-      }
-
-      .composition-position__circle--bottom-right {
-        position: absolute;
-        right: calc(40% - var(--circle-size) / 2);
-        bottom: calc(45% - var(--circle-size) / 2);
-      }
-
-      .composition-transform__circle--top {
-        transform: translate(
-          calc(var(--composition-size) / 2 - 50%),
-          calc(var(--composition-size) / 2 - 50% - 45%)
-        );
-      }
-
-      .composition-transform__circle--bottom-left {
-        transform: translate(
-          calc(var(--composition-size) / 2 - 50% - 40%),
-          calc(var(--composition-size) / 2 - 50% - var(--circle-size) + 20%)
-        );
-      }
-
-      .composition-transform__circle--bottom-right {
-        transform: translate(
-          calc(var(--composition-size) / 2 - 50% + 40%),
-          calc(var(--composition-size) / 2 - 50% - 2 * var(--circle-size) + 20%)
-        );
-      }
-      /* ----------------- Task 2 ------------------- */
     </style>
   </head>
   <body>
@@ -131,9 +64,9 @@
       <p>Завдання №1</p>
       <table>
         <tr>
-          <th colspan="2">Матюшенко</th>
-          <th colspan="2">Артем</th>
-          <th colspan="4">Вячеславович</th>
+          <td colspan="2">Матюшенко</td>
+          <td colspan="2">Артем</td>
+          <td colspan="4">Вячеславович</td>
         </tr>
         <tr>
           <td rowspan="2" colspan="2">ІП-04</td>

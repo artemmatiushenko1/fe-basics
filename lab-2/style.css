@@ -1,0 +1,73 @@
+/* ----------------- Task 2 ------------------- */
+
+.composition-position,
+.composition-transform {
+  --composition-size: 400px;
+
+  position: relative;
+  height: var(--composition-size);
+  width: var(--composition-size);
+  background-color: rgba(245, 245, 220, 0.723);
+}
+
+.composition__circle {
+  --circle-size: 100px;
+
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.composition__circle--green {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.composition__circle--blue {
+  background-color: rgb(0, 0, 255, 0.5);
+}
+
+.composition__circle--red {
+  background-color: rgb(255, 0, 0, 0.5);
+}
+
+.composition-position__circle--top {
+  position: absolute;
+  left: calc(50% - var(--circle-size) / 2);
+  top: calc(39% - var(--circle-size) / 2);
+}
+
+.composition-position__circle--bottom-left {
+  position: absolute;
+  left: calc(40% - var(--circle-size) / 2);
+  bottom: calc(45% - var(--circle-size) / 2);
+}
+
+.composition-position__circle--bottom-right {
+  position: absolute;
+  right: calc(40% - var(--circle-size) / 2);
+  bottom: calc(45% - var(--circle-size) / 2);
+}
+
+.composition-transform__circle--top {
+  transform: translate(
+    calc(var(--composition-size) / 2 - 50%),
+    calc(var(--composition-size) / 2 - 50% - 45%)
+  );
+}
+
+.composition-transform__circle--bottom-left {
+  transform: translate(
+    calc(var(--composition-size) / 2 - 50% - 40%),
+    calc(var(--composition-size) / 2 - 50% - var(--circle-size) + 20%)
+  );
+}
+
+.composition-transform__circle--bottom-right {
+  transform: translate(
+    calc(var(--composition-size) / 2 - 50% + 40%),
+    calc(var(--composition-size) / 2 - 50% - 2 * var(--circle-size) + 20%)
+  );
+}
+
+/* ----------------- Task 2 ------------------- */
