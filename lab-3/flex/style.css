@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+}
+
+.header {
+  background-color: #70a7df;
+  height: 15vh;
+}
+
+.main {
+  background-color: #bce68b;
+}
+
+.aside {
+  background-color: #93b071;
+}
+
+.footer {
+  background-color: #41f2c2;
+  height: 15vh;
+}
+
+.container {
+  display: flex;
+  height: 70vh;
+}
