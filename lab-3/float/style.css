@@ -20,20 +20,34 @@ body {
 .main {
   background-color: #bce68b;
   float: left;
-  width: 50%;
+  width: 75%;
   height: 100%;
 }
 
 .aside {
   background-color: #93b071;
   float: right;
-  width: 50%;
+  width: 25%;
   height: 100%;
+}
+
+.aside__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .footer {
   background-color: #41f2c2;
   height: 15vh;
+}
+
+.footer__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .container {
