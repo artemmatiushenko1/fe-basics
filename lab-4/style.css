@@ -1,0 +1,14 @@
+.first-element--active {
+  background-color: #f1c40f;
+  color: #34495e;
+}
+
+.second-element--active {
+  background-color: #9b59b6;
+  color: #ecf0f1;
+}
+
+.img-container {
+  overflow: hidden;
+  width: 400px;
+}
