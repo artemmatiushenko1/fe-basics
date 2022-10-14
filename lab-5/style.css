@@ -30,12 +30,12 @@ body {
   align-items: center;
   justify-content: center;
   background-color: cornsilk;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .task-container:first-child {
   border-right: 2px dashed navy;
-  flex-direction: column;
-  gap: 40px;
 }
 
 .form {
@@ -65,4 +65,23 @@ body {
   cursor: pointer;
   background-color: #2ecc71;
   color: #fff;
+}
+
+table,
+tr,
+td {
+  border: 2px solid #c2c2c2;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+td {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  text-align: center;
+  transition: background-color 0.2s ease;
 }
