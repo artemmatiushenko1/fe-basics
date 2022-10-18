@@ -1,19 +1,30 @@
 'use strict';
 
-/*-------TASK-1-------*/
+/*-------TASK-1 (6 variant = (55 % 10) + 1)-------*/
 
 const refs = {
   firstElement: document.getElementById('first-element'),
-  secondElement: document.querySelector('.second-element'),
+  secondElement: document.querySelector('#first-element').nextElementSibling,
 };
 
 refs.firstElement.addEventListener('click', () => {
-  refs.firstElement.classList.toggle('first-element--active');
+  if (refs.firstElement.classList.contains('first-element--active')) {
+    refs.firstElement.classList.remove('first-element--active');
+    refs.firstElement.classList.add('second-element--active');
+  } else {
+    refs.firstElement.classList.remove('second-element--active');
+    refs.firstElement.classList.add('first-element--active');
+  }
 });
 
-refs.secondElement.addEventListener('click', (e) => {
-  e.stopPropagation();
-  refs.secondElement.classList.toggle('second-element--active');
+refs.secondElement.addEventListener('click', () => {
+  if (refs.secondElement.classList.contains('second-element--active')) {
+    refs.secondElement.classList.add('first-element--active');
+    refs.secondElement.classList.remove('second-element--active');
+  } else {
+    refs.secondElement.classList.add('second-element--active');
+    refs.secondElement.classList.remove('first-element--active');
+  }
 });
 
 /*-------TASK-1-------*/
